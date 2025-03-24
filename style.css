@@ -207,10 +207,10 @@ body{
 
 
 .ball{
-    filter: blur(250px);
+    filter: blur(200px);
     position: absolute;
     border-radius: 50%;
-    opacity: 50%;
+    opacity: 75%;
 }
 
 .ball_blue{
@@ -796,7 +796,7 @@ body{
 .ball_one{
     background-color: #164BC5;
     right: 0px;
-    bottom: 10px;
+    top: 10px;
     height: 100px;
     width: 433px;
     height: 472px;
@@ -970,10 +970,10 @@ body{
     transition: ease .5s;
 }
 
-.charity-image:hover{
+/* .charity-image:hover{
     transform: scale(1.2);
     transition: ease .5s;
-}
+} */
 
 
 .charity-card-overlay{
@@ -1163,12 +1163,15 @@ z-index: -1;
     flex: 1;
 }
 
-.lotto__feature:hover {
+.lotto__feature:hover, 
+.lotto__review:hover{
     transform: translateY(-5px);
 }
-.lotto__feature:active {
+
+/* .lotto__feature:active,
+.lotto__review:active{
     transform: translateY(0);
-}
+} */
 
 
 .lotto__feature-icon{
@@ -1235,6 +1238,7 @@ z-index: -1;
     backdrop-filter: blur(5px);
     border-radius: 24px;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 
@@ -1318,6 +1322,9 @@ z-index: -1;
         gap: 33px !important;
 
     }
+    .charity-card {
+        height: 400px !important;
+    }
     .lotto__reviews{
         width:100% !important;
     }
@@ -1337,11 +1344,445 @@ z-index: -1;
 }
 
 @media (max-width: 390px) {
+    .lotto-game-card{
+        padding: 40px 22px !important;
+    }
+
+    .lotto_card_icon {
+        height: 118px !important;
+    }
+    .lotto_card_logo {
+        height: 47px !important;
+    }
     .lotto__review-rating svg{
         height: 16px !important;
         width: 16px !important;
     }
+    .gallery-image-container img {
+        height: 322px !important;
+    }
+    .charity-card {
+        height: 360px !important;
+    }
+
 }
+
+
+@media (max-width: 360px) {
+    .lotto-game-card{
+        padding: 40px 22px !important;
+    }
+
+    .lotto_card_icon {
+        height: 118px !important;
+    }
+    .lotto_card_logo {
+        height: 47px !important;
+    }
+    .lotto__review-rating svg{
+        height: 16px !important;
+        width: 16px !important;
+    }
+    .gallery-image-container img {
+        height: 322px !important;
+    }
+    .charity-card {
+        height: 360px !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/************** 🔥 🔥 **************/
+/**************  Lottery Results SECTION  **************/
+/************** 🔥 🔥 **************/
+
+.lottery-results {
+    /* padding: 50px 20px; */
+    /* max-width: 1200px; */
+    margin: auto;
+    position: relative;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.lottery-header {
+    text-align: start;
+    margin-bottom: 30px;
+    width:100%;
+    padding: 0 10%;
+    margin-top: 102px;
+    margin-bottom: 75px;
+
+}
+
+.lottery-header h1 {
+    margin-bottom: 23px;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 68px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.lottery-header p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .lottery-header {
+        padding: 0 20px;
+        margin-top: 65px;
+        margin-bottom: 45px;
+    }
+    .lottery-header h1 {
+        font-size: 34px;
+        line-height: 100%;
+    }
+    .lottery-header p {
+        font-size: 16px;
+        line-height: 100%;
+    }
+}
+
+
+
+
+
+
+
+/* ==============================
+   Lottery Cards
+   ============================== */
+
+.lottery-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    padding: 0 10%;
+}
+
+
+.lottery-card {
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cardWrappr{
+    padding: 35px;
+}
+
+
+@media (max-width: 768px) {
+    .lottery-cards {
+        padding: 0 20px;
+    }
+    .cardWrappr {
+        padding: 20px;
+    }  
+    .lottery-card-header img {
+        height: 50px !important;
+    }
+    
+    .lottery-card-header {
+        padding: 17.5px 20px !important;
+    }
+}
+
+
+
+
+
+
+
+
+.lottery-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 17.5px 35px;
+    border-bottom: 1px solid #ACACAC;
+}
+
+.lottery-card-header img {
+    width: max-content;
+    height: 67px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.register-btn{
+    background-color: #1097CF !important;
+}
+
+
+/* ==============================
+   Winning Numbers
+   ============================== */
+
+.lottery-card-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 44px;
+}
+
+.winning-numbers p,
+.jackpot-info p{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+
+
+
+.numbers-grid {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+}
+
+.numbers-grid div {
+    width: 35px;
+    height: 35px;
+    background: #1097CF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 34px;
+    color: #FFFFFF;
+    cursor: pointer;
+    user-select: none;
+}
+
+.numbers-grid div.hightLight {
+    background: #fff;
+    color: #000;
+}
+
+
+/* ==============================
+   Jackpot Info
+   ============================== */
+
+
+
+.jackpot-info h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+/* ==============================
+   Lottery Timer
+   ============================== */
+
+.lottery-timer {
+    background-color: #FCE00B;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+
+
+
+/************** 🔥 🔥 **************/
+/**************  Lottery Results SECTION  **************/
+/************** 🔥 🔥 **************/
+/* ==============================
+   FAQ Section
+   ============================== */
+
+.faq-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 140px 10%;
+}
+
+
+.faq-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 890px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #A5A5A5;
+    backdrop-filter: blur(50px);
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.faq-content h1 {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 55px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 47px 0 80px 0;
+}
+
+.faq-item {
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.faq-question{
+    padding: 0px 30px 40px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #ffffff20;
+    cursor: pointer;
+}
+
+/* .faq-question svg{
+    transform: rotate(-90deg);
+} */
+
+.lastChild, .border-none{
+    border: none !important;
+}
+
+.faq-question h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.faq-item p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+    padding: 0px 30px 30px 30px;
+    display: none;
+    transition: ease .3s all;
+}
+
+.faq-image {
+    flex: 1;
+    width: 1200px;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: -300px;
+    bottom: 250px;
+}
+
+.faq-image img {
+    width: 100%;
+}
+
+/* ==============================
+   Responsive Design
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .faq-content h1 {
+        font-size: 34px !important;
+        margin: 10px 0 40px 0 !important;
+        
+    }
+    
+
+    .faq-content{
+        width:100%;
+    }
+
+    .faq-question h2 {
+        font-size: 18px !important;
+        line-height: 28px !important;
+        max-width: 288px !important;
+    }
+    
+    .faq-item p {
+        font-size: 16px !important;
+        line-height: 26px !important;
+    }
+    
+    .faq-item{
+        padding: 0 !important;
+    }
+
+    .faq-question{
+        padding: 0px 0px 40px 0px !important;
+    }
+
+    .faq-question.lastChild{
+        padding: 0 !important;
+    }
+
+
+    .lottery-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .lottery-results{
+        padding-bottom: 114px;
+    }
+}
+
+
+@media (max-width: 1700px) {
+    .faq-image {
+        width: 700px !important;
+        right: -185px !important;
+        bottom: 275px !important;
+    }
+}
+@media (max-width: 1600px) {
+    .faq-image {
+        display: none !important;
+    }
+}
+
+
+
+
 
 
 
@@ -1396,6 +1837,8 @@ z-index: -1;
 .footer__logo {
     width: 332px;
     margin-bottom: 34px;
+    cursor: pointer;
+    user-select: none;
 }
 
 /* Text */
@@ -1484,5 +1927,416 @@ z-index: -1;
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************** 🚀 🚀 **************/
+/**************  RAGISTRATION and LOGIN PAGE  **************/
+/************** 🚀 🚀 **************/
+
+.header.page{
+    height: max-content !important;
+    padding: 0 20px 220px 20px !important;
+}
+
+/* Form Container */
+.registration-form {
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px !important;
+    overflow: hidden;
+    padding: 30px 56px 56px 56px;
+    width: 100%;
+    max-width: 552px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 111px;
+    margin-top: 238px;
+    z-index:1;
+}
+
+
+/* Form Title */
+.registration-form h1 {
+    margin-bottom: 43px;
+
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 68px;
+    text-transform: capitalize;
+    background: linear-gradient(96.24deg, #FFFFFF 4.93%, #999999 96.48%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* Input Fields */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding: 17px 18px;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* Password Requirements */
+.password-requirements {
+    margin-bottom: 36px;
+    text-align: left;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Checkbox Group */
+.form-checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 36px;
+    position: relative;
+}
+
+.form-checkbox-group input {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+}
+
+/* Links */
+.terms-link, .privacy-link, .login-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.terms-link:hover, .privacy-link:hover, .login-link:hover {
+    text-decoration: underline;
+}
+
+
+.form-button {
+    width: 100%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    padding: 16px 20px;
+    background: #1097CF;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    margin-bottom: 36px;
+}
+
+
+.form-button:hover {
+    background-color: #0d87bb;
+}
+
+
+
+
+
+.custom-checkbox {
+    appearance: none; /* Hide default checkbox */
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.form-label{
+    margin-left: 30px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+/* Checked state */
+.custom-checkbox:checked {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Add checkmark */
+.custom-checkbox:checked::after {
+    content: "✔"; /* Unicode checkmark */
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/* Login Text */
+.login-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.login-link{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #04B8EA;
+    text-decoration: underline;
+}
+
+.text-orange{
+    color: #C39804;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .header.page{
+        padding: 0 20px 80px 20px !important;
+    }
+    
+
+    .registration-form {
+        padding: 57px 20px;
+        margin-top: 138px;
+    }
+    
+    .registration-form h1 {
+        font-size: 34px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    .form-button {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************** 🚀 🚀 **************/
+/**************  INFO PAGE  **************/
+/************** 🚀 🚀 **************/
+
+.info-section {
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 150px;
+    z-index: 1;
+}
+.info-container{
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px);
+    border-radius: 30px;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.info-text-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.info-text-header h1 {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 68px;
+    background: linear-gradient(91.42deg, #fff 11.4%, #999 104.69%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.info-text-header p,
+.info-content p {
+    font-size: 18px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.info-content h2,
+.info-content h3 {
+    font-weight: 700;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.info-content h2 { font-size: 24px; }
+.info-content h3 { font-size: 20px; }
+
+
+.info_light_effect_one{
+    background-color: #0F4BD4DE;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 50%;
+    z-index: -1;
+    opacity: 50%;
+}
+
+.info_light_effect_two{
+    background-color: #0F4BD4DE;
+    top: 0;
+    right:0;
+    height: 100%;
+    width: 50%;
+    z-index: -1;
+    opacity: 50%;
+}
+
+
+/* Default styles for desktop (already optimized) */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .info-section {
+        padding: 60px 15px;
+    }
+
+    .info-text-header h1 {
+        font-size: 42px;
+        line-height: 56px;
+    }
+
+    .info-text-header p,
+    .info-content p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .info-content h2 { font-size: 22px; }
+    .info-content h3 { font-size: 18px; }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+    .info-container{
+        width:90% !important;
+        padding: 35px 25px !important;
+    }
+    .info-section {
+        padding: 40px 0px !important;
+    }
+
+    .info-text-header h1 {
+        font-size: 36px;
+        line-height: 48px;
+        margin-bottom: 8px !important;
+    }
+
+    .info-text-header p,
+    .info-content p {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .info-content h2 { font-size: 20px; }
+    .info-content h3 { font-size: 16px; }
+
+    .info-text-header { margin-bottom: 40px; }
+}
+
+/* Extra small screens (very small devices) */
+@media (max-width: 480px) {
+    .info-text-header h1 {
+        font-size: 30px;
+        line-height: 42px;
+    }
+
+    .info-text-header p,
+    .info-content p {
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    .info-content h2 { font-size: 18px; }
+    .info-content h3 { font-size: 16px; }
+}
+
 
 
